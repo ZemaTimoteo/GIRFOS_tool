@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Parameters FOVx="200" FOVy="200" Name="P" Nx="4077" Ny="4077" TE="1" TR="2000">
+   <ConcatSequence Name="Cmain" Repetitions="1">
+      <ConcatSequence Name="C1" Repetitions="1">
+         <AtomicSequence Name="A1">
+            <HARDRFPULSE Duration="1" FlipAngle="90" Name="Href" Symmetry="0.5"/>
+         </AtomicSequence>
+         <DelayAtomicSequence Delay="a1" DelayType="C2C" Name="DTE1" Observe="P,TE" StartSeq="A1" StopSeq="DTE13"/>
+         <AtomicSequence Name="A3">
+            <ExternalGradPulse ADCs="a1" Axis="GX" Filename="/home/tfernandes/Documents/Projetos/Project_lfStroke/Code/0_matlabCode/4_Simulation_IRF/Input_sequences/SPI_test_25/interleaves/mGX1.h5" Name="P2" Observe="P,Nx" Scale="1"/>
+            <ExternalGradPulse ADCs="a1" Axis="GY" Filename="/home/tfernandes/Documents/Projetos/Project_lfStroke/Code/0_matlabCode/4_Simulation_IRF/Input_sequences/SPI_test_25/interleaves/mGY1.h5" Name="P3" Observe="P,Nx" Scale="1"/>
+         </AtomicSequence>
+         <DelayAtomicSequence Delay="a1" DelayType="B2E" Name="D1" Observe="P,TR" StartSeq="A1" StopSeq="A3"/>
+      </ConcatSequence>
+   </ConcatSequence>
+</Parameters>

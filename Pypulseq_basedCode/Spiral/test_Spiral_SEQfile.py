@@ -1,8 +1,22 @@
 #!/usr/bin/env python2
 # -*- coding: utf-8 -*-
 """
-Created on Mon Jul  8 14:33:25 2019
-Run my spirals in pypulseq
+Name:
+    - Test_Spiral_SEQfile
+
+Description:
+    - This code creates spiral (with external gradients) '.seq' file
+
+Input:
+
+Output:
+    - '.seq' file
+    - folder with name of file
+    - '.mat' file with sequence parameters
+    
+Settings:
+    - 
+
 @author: tfernandes
 """
 
@@ -39,7 +53,7 @@ save_flag  = False  # save file
 plotTest   = True   # Plot sequence
 reportTest = False  # Report the sequence
 diffusion  = True   # Sequence w/ diffusion - 'True' OR Sequence w/out diffusion - 'False'
-getGRADs   = True
+getGRADs   = True   # Get gradients for Matlab analyis - 'True' OR - 'False'
 seq2jem    = False   # convert '.seq' to '.xml'
 
 #%% --- 0.5 - Import data

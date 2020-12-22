@@ -1,9 +1,20 @@
 #!/usr/bin/env python2
 # -*- coding: utf-8 -*-
 """
-Created on Mon Jul  8 14:33:25 2019
-Run my spirals in pypulseq
-@author: tfernandes
+Name:
+    - test_GIRF_SEQfile
+Description:
+    - This code creates GIRF (with external gradients) '.seq' file to run in scanner
+Input:
+    -
+    
+Output:
+    -
+    
+Settings:
+    - 
+    
+by: TTFernandes, IST - 2020
 """
 
 # =============================================================================

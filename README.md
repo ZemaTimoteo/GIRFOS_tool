@@ -1,7 +1,12 @@
 # GIRFOS_tool  (Gradient Impulse Response Function - Open-Source Toolbox)
 # 
 
-This tool allows to design MRI sequences to measure the Impulse Response Function of a specific scan
-This tool work with a couple of packages. Both in python and Matlab.
+A major challenge in MRI, particularly when aiming to reduce equipment costs, is to be able to cope with imperfect hardware performance. Even when using current clinical systems, calibration is often required to reduce image artifacts; an example is the impact of eddy-currents in readouts (i.e. spiral). 
 
-Prior knowledge to pypulseq is helpful to understand the design of the pulseq.
+- This tool helps control for such effect by determining the gradient impulse response function (GIRF) using a calibration pulse sequence.
+- This tool allows to design MRI sequences to measure the Impulse Response Function of a specific scan.
+- This tool work with a couple of packages. Both in python and Matlab.
+
+Prior knowledge to pypulseq is helpful to understand the design of the pulse sequence.
+
+This implementation will contribute towards the development of open source tools for spiral imaging.

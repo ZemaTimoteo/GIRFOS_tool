@@ -1,0 +1,14 @@
+This file helps describing pypulseq_based Code.
+
+Folder: GIRF
+  -
+  -
+  
+Folder: GRE
+  -
+  
+Folder: Spiral
+  - 
+  
+Folder:
+  - Diffusion

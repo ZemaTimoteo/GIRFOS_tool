@@ -3,7 +3,7 @@ Tiago T. Fernandes
 October 2020
 LASEEB, Instituto Superior Técnico, Lisbon, Portugal
 
-This function builds a spin echo diffusion weighting sequence with spiral trajectories
+This function builds a spin echo diffusion weighting sequence with spiral trajectories and EPI trajectory
 optimizing the TE for a desired b-value.
 """
 from __future__ import division

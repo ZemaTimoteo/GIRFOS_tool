@@ -10,5 +10,5 @@ Folder: GRE
 Folder: Spiral
   - 
   
-Folder:
-  - Diffusion
+Folder: Diffusion
+  -

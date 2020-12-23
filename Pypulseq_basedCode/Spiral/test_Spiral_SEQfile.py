@@ -34,14 +34,12 @@ import sys
 
 sys.path.append('/home/tfernandes/Documents/PYTHON/Toolboxes')
 sys.path.append('/home/tfernandes/Documents/Projetos/Project_lfStroke/Code/1_pythonCodes/Diffusion')
-sys.path.append('/home/tfernandes/Documents/Projetos/Project_lfStroke/Code/1_pythonCodes/py2jemris')
 os.chdir('/home/tfernandes/Documents/Projetos/Project_lfStroke/Code/1_pythonCodes/Spiral/pulses')
 
 from make_Spiral_SEQfile import generate_SeqFile_Spiral
 from make_Diffusion_SEQfile import generate_SeqFile_SpiralDiffusion
 from scipy.io import savemat
 from pypulseq.calc_duration import calc_duration
-from seq2xml import seq2xml
 
 
 

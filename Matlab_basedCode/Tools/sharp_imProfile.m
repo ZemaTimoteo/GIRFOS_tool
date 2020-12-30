@@ -1,6 +1,13 @@
 function bound = sharp_imProfile(auxTest,fig)
-    
-
+    %%   
+    % This function returns a struct 'bound' which contains the bourders of distinct regions for a imProfile.
+    %  -  it can be used only for binary images (with only two distinct regions)
+    %  -  input:
+    %          -auxTest: it is the output of image profile function of matlab
+    %          -fig: 'True' or 'Fals'
+    % by: TTfernandes, 2020 IST
+    %
+    %%
     % division in two parts
     part1_vect = auxTest(1:round(size(auxTest,1)/2),:);
     part2_vect = auxTest(round(size(auxTest,1)/2)+1:end,:);

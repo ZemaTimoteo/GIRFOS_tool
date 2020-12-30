@@ -13,6 +13,5 @@ This implementation will contribute towards the development of open source tools
 
 *To run the python codes create a Toolbox folder with the following toolboxes:
 
-          - code from pypulseq - https://github.com/imr-framework/pypulseq
-          
-          - code from pulseqDiffusion - https://github.com/openjournals/joss-reviews/issues/2478
+code from pypulseq - https://github.com/imr-framework/pypulseq       
+code from pulseqDiffusion - https://github.com/openjournals/joss-reviews/issues/2478

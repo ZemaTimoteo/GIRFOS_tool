@@ -5,15 +5,7 @@ Name:
     - test_GIRF_SEQfile
 Description:
     - This code creates GIRF (with external gradients) '.seq' file to run in scanner
-Input:
-    -
-    
-Output:
-    -
-    
-Settings:
-    - 
-    
+
 by: TTFernandes, IST - 2020
 """
 
@@ -29,9 +21,9 @@ matplotlib.use('TKAgg')
 import matplotlib.pyplot as plt
 import sys
 
-sys.path.append('/home/tfernandes/Documents/PYTHON/Toolboxes')
+sys.path.append('/Toolboxes')
 
-os.chdir('/home/tfernandes/Documents/Projetos/Project_lfStroke/Code/1_pythonCodes/GIRF')
+os.chdir('GIRFOS_tool/Pypulseq_basedCode/GIRF')
 from make_GIRF_SEQfile import generate_GIRF_SeqFile
 from scipy.io import savemat
 
@@ -67,7 +59,7 @@ Dum        = True    # Dummy for first pulse
 
 
     # --- load data
-dir = '/home/tfernandes/Documents/Projetos/Project_lfStroke/Code/1_pythonCodes/GIRF/pulses'
+dir = 'Pypulseq_basedCode/GIRF/pulses'
 
 Npulses   = 12      # Number of triangular pulses
 nreps     = 3       # Number of repetitions
@@ -122,7 +114,7 @@ if save_flag:
     else:
         ttY = 0
     # print("Test Report: " + seq.test_report())
-    os.chdir('/home/tfernandes/Documents/Projetos/Project_lfStroke/Tests/2_GIRF_test')
+    # os.chdir('/GIRF_test')
     standName = 'test%s_GIRF_tX-%s_tY-%s_Npulses-%s_Nreps-%s_Nslices-%s_TR-%ss_sm-%s_RFbw-1_RFoff-%smm_tPulTotal-%sms' % (test, ttX, ttY, Npulses, nreps, nslices, round(TR), p, round(RFoffset*1e3),tPulTotal)
     if os.path.isdir("Test/" + standName):
         print("\n\n - Directory already exist - ")

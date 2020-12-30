@@ -1,5 +1,5 @@
-%% TrianglePulse function for GIRF
-%  by TTFernandes, July 2020
+%% TrianglePulse function for GIRF - pulses for generate in pypulseq a '.seq' file
+%  by TTFernandes, July 2020, IST
 
 %% Initialize
 clc
@@ -8,8 +8,8 @@ clear all
 
 FFT      = 1;  % '1' - True, '0' - False
 computer = 2;  % 'Seia' - 2 OU 'Casa' - 1
-cdTest = '/home/tfernandes/Documents/Projetos/Project_lfStroke/Code/0_matlabCode/1_GIRF';
-cd('/home/tfernandes/Documents/Projetos/Project_lfStroke/Code/0_matlabCode/1_GIRF')
+cdTest = 'GIRFOS_tool/Matlab_basedCode/Tools';
+cd(cdTest)
 %% Dirac delta Function
 
 test  = 'SCAN';

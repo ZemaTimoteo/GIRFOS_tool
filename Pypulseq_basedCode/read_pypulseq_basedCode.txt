@@ -10,7 +10,7 @@ Folder: GIRF
           - code from pypulseq - https://github.com/imr-framework/pypulseq
           - code from pulseqDiffusion - https://github.com/openjournals/joss-reviews/issues/2478
       - Set paths
-      - To define different GIRF pulses run code from folder ('get_GIRF.m')- https://github.com/ZemaTimoteo/GIRFOS_tool/tree/main/Matlab_basedCode/GIRF
+      - To define different GIRF pulses run code from folder ('GIRF_shape_script.m')
       - Run the test_GIRF_SEQfile.py
       
 Folder: GRE

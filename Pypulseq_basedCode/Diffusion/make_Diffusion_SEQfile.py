@@ -21,8 +21,8 @@ import sys
 import diff_funcs as difunc
 
 # I do this because apparently the pip pypulseq was crashing on some functions (make_trap_pulse)
-sys.path.append('/home/tfernandes/Documents/PYTHON/Toolboxes')
-sys.path.insert(1, '/home/tfernandes/Documents/PYTHON/Toolboxes/pypulseq')
+sys.path.append('/Toolboxes')
+sys.path.insert(1, '/Toolboxes/pypulseq')
 
 import make_adc
 from make_adc import make_adc
@@ -47,7 +47,7 @@ from make_delay import make_delay
 from Sequence.sequence import Sequence
 from vds_2d import vds_2d
 
-sys.path.insert(1, '/home/tfernandes/Documents/PYTHON/Toolboxes/pypulseq/Sequence')
+sys.path.insert(1, '/Toolboxes/pypulseq/Sequence')
 import sequence
 from sequence import Sequence
 

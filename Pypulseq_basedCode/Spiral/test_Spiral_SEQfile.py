@@ -7,17 +7,7 @@ Name:
 Description:
     - This code creates spiral (with external gradients) '.seq' file
 
-Input:
-
-Output:
-    - '.seq' file
-    - folder with name of file
-    - '.mat' file with sequence parameters
-    
-Settings:
-    - 
-
-@author: tfernandes
+@author: tfernandes, IST 2020
 """
 
 # =============================================================================
@@ -32,9 +22,9 @@ matplotlib.use('TKAgg')
 import matplotlib.pyplot as plt
 import sys
 
-sys.path.append('/home/tfernandes/Documents/PYTHON/Toolboxes')
-sys.path.append('/home/tfernandes/Documents/Projetos/Project_lfStroke/Code/1_pythonCodes/Diffusion')
-os.chdir('/home/tfernandes/Documents/Projetos/Project_lfStroke/Code/1_pythonCodes/Spiral/pulses')
+sys.path.append('/Toolboxes')
+sys.path.append('/Pypulseq_basedCode/Diffusion')
+# os.chdir('/home/tfernandes/Documents/Projetos/Project_lfStroke/Code/1_pythonCodes/Spiral/pulses')
 
 from make_Spiral_SEQfile import generate_SeqFile_Spiral
 from make_Diffusion_SEQfile import generate_SeqFile_SpiralDiffusion
@@ -229,7 +219,7 @@ if getGRADs:
 if save_flag:
     if reportTest:
         print("Test Report: " + seq.test_report())
-    os.chdir('/home/tfernandes/Documents/Projetos/Project_lfStroke/Tests/1_Spiral_test')
+    # os.chdir('/home/tfernandes/Documents/Projetos/Project_lfStroke/Tests/1_Spiral_test')
     standName = 'test%s_Spiraltest%s_Nreps-%s_Nslices-%s_TR-%ss_TE-%sms_sm-%s_RFbw-1_RFoff-%smm%s_Ndirs-%s_bvalue-%s%s' % (test, testSPI, nreps, nslices, round(TR), round(TE*1e3), max_slew, round(RFoffset * 1e3), diff, ndirs, bvalue[0], fatsat_str)
     if os.path.isdir("Test/" + standName):
         print("\n\n - Directory already exist - ")
@@ -250,7 +240,7 @@ if save_flag:
         savemat("GradY.mat", gradY)
 
     # save '.seq' file
-    os.chdir('/home/tfernandes/Documents/Projetos/Project_lfStroke/Tests/1_Spiral_test')
+    # os.chdir('/home/tfernandes/Documents/Projetos/Project_lfStroke/Tests/1_Spiral_test')
     os.chdir("Test/" + standName)
     seq.write(standName + '.seq')
 
@@ -266,7 +256,7 @@ if save_flag:
 if seq2jem:
     seqName = seq
     xmlName = standName
-    out_folder ="/home/tfernandes/Documents/Projetos/Project_lfStroke/Tests/1_Spiral_test/Test/" + standName + "/Reults"
+    out_folder ="/Test/" + standName + "/Reults"
     if os.path.isdir(out_folder):
         print("\n\n - Directory already exist - ")
     else:

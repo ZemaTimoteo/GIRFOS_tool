@@ -16,9 +16,13 @@ Disclaim:
 We used the following toolbox:
 
 https://mrirecon.github.io/bart/
+
 https://github.com/ndwork/griddingCodes
+
 https://github.com/mriphysics/verse-mb
+
 https://github.com/imr-framework/pypulseq
+
 https://github.com/openjournals/joss-reviews/issues/2478
 
 

@@ -13,7 +13,7 @@ This implementation will contribute towards the development of open source tools
 
 
 Disclaim:
-We used the following toolbox:
+In this tool we used the following toolbox:
 
 https://mrirecon.github.io/bart/
 
@@ -24,6 +24,7 @@ https://github.com/mriphysics/verse-mb
 https://github.com/imr-framework/pypulseq
 
 https://github.com/openjournals/joss-reviews/issues/2478
+
 
 
 * To run the matlab codes add to the Tools folder the following toolboxes:

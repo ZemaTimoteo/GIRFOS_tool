@@ -1,6 +1,6 @@
 %% ========
 % This script allows to create a diffusion images based on S=S0exp(-bD),
-%    of each tissues adding tham together to create an image.
+%    of each tissues adding them together to create an image.
 %% ========
 
 %% Part 1 - Data generation for simulation test

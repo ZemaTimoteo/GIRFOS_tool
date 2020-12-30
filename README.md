@@ -27,7 +27,7 @@ In this tool we used the following toolbox:
 
 
 
-* To run the matlab codes add to the Tools folder the following toolboxes:
+To run the matlab codes add to the Tools folder the following toolboxes:
 - bart - https://mrirecon.github.io/bart/
 - Gridding - https://github.com/ndwork/griddingCodes
 

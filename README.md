@@ -5,7 +5,7 @@ A major challenge in MRI, particularly when aiming to reduce equipment costs, is
 
 - This tool helps control for such effect by determining the gradient impulse response function (GIRF) using a calibration pulse sequence.
 - This tool allows to design MRI sequences to measure the Impulse Response Function of a specific scan.
-- This tool work with a couple of packages. Both in python and Matlab.
+- This tool work with a couple of packages: in python and Matlab.
 
 Prior knowledge to pypulseq is helpful to understand the design of the pulse sequence.
 

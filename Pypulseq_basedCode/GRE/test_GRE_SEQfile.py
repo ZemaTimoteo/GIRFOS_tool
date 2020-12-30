@@ -6,7 +6,7 @@ import os
 import numpy as np
 import matplotlib
 
-sys.path.append('/home/tfernandes/Documents/PYTHON/Toolboxes')
+sys.path.append('/Toolboxes')
 
 
 from pypulseq.Sequence.sequence import Sequence
@@ -90,7 +90,7 @@ if plotTest:
 
 # 6 - Save
 if save_flag:
-    os.chdir('/home/tfernandes/Documents/Projetos/Project_lfStroke/Tests/5_GRE')
+    # os.chdir('/home/tfernandes/Documents/Projetos/Project_lfStroke/Tests/5_GRE')
     standName = 'test%s_FOV-%s_N-%s_alpha-%s' % (test,round(fov*1e3),Nx,alpha)
     if os.path.isdir(standName):
         print("\n\n - Directory already exist - ")

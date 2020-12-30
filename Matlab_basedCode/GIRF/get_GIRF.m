@@ -1,55 +1,35 @@
-%% Recon of images from scanner with pulseq.seq for GIRF sequence
+%% Saves the GIRF from scanner of the respective GIRF sequence from pypulseq.seq 
 % TTFernandes, IST 2020
 
 %% part 0 - Addpath & Get Folders
 clear all;
 
-computer = 2; % 1 - MyPC OR 2 - Seia PC
- 
-if computer == 1
-    cd('D:\Tiago\Trabalho\2020_IST\lfStroke\Spiral_Optimization\4_Reconstruction')
-    addpath('mapVBVD\') % To read
-    addpath(genpath('Aux_Functions'));  % To reconstruct
-else
-    cd('/home/tfernandes/Documents/Projetos/Project_lfStroke/Code/0_matlabCode/3_Reconstruction_Code')
-    addpath('mapVBVD/') % To read
-    addpath(genpath('/home/tfernandes/Documents/Projetos/Project_lfStroke/Code/bart-master'))           % To read
-    addpath(genpath('/home/tfernandes/Documents/Projetos/Project_lfStroke/Code/0_matlabCode/1_GIRF'))
-    addpath(genpath('GIRF')) % To read    
-    addpath(genpath('Aux_Functions'));  % To reconstruct
-end
+
+addpath(genpath('GIRFOS_tool/Matlab_basedCode/Tools/'));  % To reconstruct
 
 
 % close all
 clc
 
 
-%% part 1 - Get Files
-
-if computer == 1
-    folder = 'D:\Tiago\Trabalho\2020_IST\lfStroke\Spiral_Optimization\3_Data_scan\SPIRAL_measurement\';
-    folder = [folder, 'SPIRAL_test_3\'];
+%% part 1 - Get Files (For exemple choose file '.dat' from folder /exemple in this toolbox)
+str ={'select file'}
+s = listdlg('PromptString','Select a file:','SelectionMode','single','ListString',str);
+if s==1
+    [file,folder]=uigetfile;
 else
-    myCD = '/home/tfernandes/Documents/Projetos/Project_lfStroke/Tests/2_GIRF_test/Test';
-    cd(myCD);
-    str ={'select file'}
-    s = listdlg('PromptString','Select a file:','SelectionMode','single','ListString',str);
-    if s==1
-        [file,folder]=uigetfile;
-    else
-        folder=uigetdir;
-    end
-    strTest1 = '.dat';
-    auxA     = strfind(file,strTest1);
-    filename = file(1:auxA-1);
-    
-    file_folder = folder;
-    file_folder_cfl_hdr = [folder '/cfl_hdr_files'];
-    file_folder_results = [folder, '/Results'];
-    mkdir([file_folder_cfl_hdr]);
-    mkdir([file_folder_results]);
-    cd(folder)
+    folder=uigetdir;
 end
+strTest1 = '.dat';
+auxA     = strfind(file,strTest1);
+filename = file(1:auxA-1);
+
+file_folder = folder;
+file_folder_cfl_hdr = [folder '/cfl_hdr_files'];
+file_folder_results = [folder, '/Results'];
+mkdir([file_folder_cfl_hdr]);
+mkdir([file_folder_results]);
+cd(folder)
 
 [files] = dir(file_folder);
 fn = files(5).name;       % get '.dat' file
@@ -167,19 +147,15 @@ fprintf('\n\n 2 - Sucessfully finished - Define Parametres\n\n')
 
 % ... part 3.1 - read input in frequency domain ...
 
-if computer == 1
-    input            = load(['D:\Tiago\Trabalho\2020_IST\lfStroke\Spiral_Optimization\5_GIRF\1_matlab_code\pulses\girf_pulse_', num2str(Npulses),'_DT_1_1e-5_p', num2str(p),'.mat']);
-    input_freq       = load(['D:\Tiago\Trabalho\2020_IST\lfStroke\Spiral_Optimization\5_GIRF\1_matlab_code\pulses\girf_Input_freq_', num2str(Npulses),'.mat']);
-    input_sincF_freq = load(['D:\Tiago\Trabalho\2020_IST\lfStroke\Spiral_Optimization\5_GIRF\1_matlab_code\pulses\girf_Input_freq_sincFunct_', num2str(Npulses),'.mat']);
-else
-    input            = load(['/home/tfernandes/Documents/Projetos/Project_lfStroke/Code/0_matlabCode/1_GIRF/pulses/girf_pulse_', num2str(Npulses),'_DT_1_1e-5_p', num2str(p),'.mat']);
-    if type == 'PULS'
-        input_freq   = load(['/home/tfernandes/Documents/Projetos/Project_lfStroke/Code/0_matlabCode/1_GIRF/pulses/girf_',type,'_Input_freq_', num2str(Npulses),'.mat']);
-    elseif type == 'SCAN'
-        input_freq   = load(['/home/tfernandes/Documents/Projetos/Project_lfStroke/Code/0_matlabCode/1_GIRF/pulses/girf_',type,'_Input_freq_', num2str(Npulses),'_tTotal_',num2str(tTotal),'ms.mat']);        
-    end
-    input_sincF_freq = load(['/home/tfernandes/Documents/Projetos/Project_lfStroke/Code/0_matlabCode/1_GIRF/pulses/girf_',type,'_Input_freq_sincFunct_', num2str(Npulses),'.mat']);
+
+input            = load(['/home/tfernandes/Documents/Projetos/Project_lfStroke/Code/0_matlabCode/1_GIRF/pulses/girf_pulse_', num2str(Npulses),'_DT_1_1e-5_p', num2str(p),'.mat']);
+if type == 'PULS'
+    input_freq   = load(['/home/tfernandes/Documents/Projetos/Project_lfStroke/Code/0_matlabCode/1_GIRF/pulses/girf_',type,'_Input_freq_', num2str(Npulses),'.mat']);
+elseif type == 'SCAN'
+    input_freq   = load(['/home/tfernandes/Documents/Projetos/Project_lfStroke/Code/0_matlabCode/1_GIRF/pulses/girf_',type,'_Input_freq_', num2str(Npulses),'_tTotal_',num2str(tTotal),'ms.mat']);        
 end
+input_sincF_freq = load(['/home/tfernandes/Documents/Projetos/Project_lfStroke/Code/0_matlabCode/1_GIRF/pulses/girf_',type,'_Input_freq_sincFunct_', num2str(Npulses),'.mat']);
+
 
 fprintf('\n\n 3 - Sucessfully finished - Read Input\n\n')
 

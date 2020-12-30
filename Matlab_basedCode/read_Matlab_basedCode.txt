@@ -30,8 +30,9 @@ Folder: Aux_Functions
   -
   -
 
-* To run this create a folder with the following toolboxes:
-  - code from pypulseq - https://github.com/imr-framework/pypulseq
-  - code from pulseqDiffusion - https://github.com/openjournals/joss-reviews/issues/2478  
+* To run this add to your 'Tool' folder the following toolboxes:
+  - bart - https://mrirecon.github.io/bart/
+  - Gridding - https://github.com/ndwork/griddingCodes
+ 
   
   Also you need to install JEMRIS to run 

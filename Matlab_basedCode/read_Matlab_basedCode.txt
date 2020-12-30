@@ -11,9 +11,18 @@ Folder: Spiral
   - 
   
 Folder: Tools
-  -
+  - Input_sequences (Folder)
+  - pulses (Folder)
+  - GIRF_shape_script.m (Generate TrianglePulse in '.mat' file, for generate with external gradients a '.seq' file w/ 'test_GIRF_SEQfile.py')
+  - sharp_imProfile.m (his function returns a struct 'bound' which contains the bourders of distinct regions for a imProfile matlab function)
   
   
 Folder: Aux_Functions
   -
   -
+
+* To run this create a folder with the following toolboxes:
+  - code from pypulseq - https://github.com/imr-framework/pypulseq
+  - code from pulseqDiffusion - https://github.com/openjournals/joss-reviews/issues/2478  
+  
+  Also you need to install JEMRIS to run 

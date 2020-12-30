@@ -39,24 +39,6 @@ reportTest = False   # Report the sequence
 tPrePost   = False   # Test ADC pre gradient and post gradient
 Dum        = True    # Dummy for first pulse
 
-#%% --- 0.5 - Import data
-
-    # --- load data SPIRAL
-# dir = '/home/tfernandes/Documents/MATLAB/Tests/18_10_Tests/Tiago_code/files_created/seq-simu_files/seq-simu_interleaves_1_'
-# testSTR  = 'test_107'
-# TR       = 2000e-3 # [s]
-# ADC      = 2894
-#
-# os.chdir(dir+testSTR)
-# mat = scipy.io.loadmat('vectSpiral.mat')
-# aux_vectSpiral = mat['vectSpiral']
-# i_t = np.zeros((ADC,2))
-# # --- time & gradients
-# vectSpiral = aux_vectSpiral[0, 0][0]
-# i_t[:,0]  = vectSpiral[:,0] # in T/m
-# i_t[:,1]  = vectSpiral[:,1] # in T/m
-# shape_i_t = [ADC, 2]
-
 
     # --- load data
 dir = 'Pypulseq_basedCode/GIRF/pulses'

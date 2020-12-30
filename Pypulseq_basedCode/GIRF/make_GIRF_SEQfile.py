@@ -14,7 +14,7 @@ import matplotlib.pyplot as plt
 import os
 import sys
 
-sys.path.insert(1, '/home/tfernandes/Documents/PYTHON/Toolboxes/pypulseq')
+sys.path.insert(1, '/Toolboxes/pypulseq')
 from Sequence.sequence import Sequence
 from calc_duration import calc_duration
 from make_adc import make_adc
@@ -26,7 +26,7 @@ from make_arbitrary_grad import make_arbitrary_grad
 from make_extended_trapezoid import make_extended_trapezoid
 from opts import Opts
 
-sys.path.insert(1, '/home/tfernandes/Documents/PYTHON/Toolboxes/pypulseq/Sequence')
+sys.path.insert(1, '/Toolboxes/pypulseq/Sequence')
 
 
 def generate_GIRF_SeqFile(iT, tr, te, Npuls, mg, ms, grt, fA, n_slices, reps, sliceT, tPre, tPos, tX, tY, tPlot, tReport, rf_offset, testPRE_POST, dummy):

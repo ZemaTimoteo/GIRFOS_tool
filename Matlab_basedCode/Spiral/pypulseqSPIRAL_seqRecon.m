@@ -1,3 +1,5 @@
+%% Obtain external gradients in matlab matrix from pypulseq sequence
+% by TTFernandes, 2020 IST
 clc
 
 %% --- 1 - Load and initialize vectors

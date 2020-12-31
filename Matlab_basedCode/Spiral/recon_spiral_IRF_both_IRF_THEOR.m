@@ -5,18 +5,7 @@
 
 %% part 0 - Addpath & Get Folders
 clear all;
-computer = 2; % 1 - MyPC OR 2 - Seia PC
-if computer == 1
-    cd('D:\Tiago\Trabalho\2020_IST\lfStroke\Spiral_Optimization\4_Reconstruction')
-    addpath('mapVBVD\') % To read
-    addpath(genpath('Aux_Functions'));  % To reconstruct
-else
-    cd('/home/tfernandes/Documents/Projetos/Project_lfStroke/Code/0_matlabCode/3_Reconstruction_Code')
-    addpath('mapVBVD/') % To read
-    addpath(genpath('/home/tfernandes/Documents/Projetos/Project_lfStroke/Code/bart-master')) % To read
-    addpath(genpath('/home/tfernandes/Documents/Projetos/Project_lfStroke/Code/0_matlabCode'));
-    addpath(genpath('Aux_Functions'));  % To reconstruct
-end
+addpath(genpath('GIRFOS_tool/Matlab_basedCode/Tools/'));  % To reconstruct        
 % close all
 clc
 
@@ -25,31 +14,23 @@ clc
 if exist('test_GIRF_&_THEO','var') == 1
     fprintf('\n\n 1 - Sucessfully finished \n\n')
 else
-    if computer == 1
-        folder = 'D:\Tiago\Trabalho\2020_IST\lfStroke\Spiral_Optimization\3_Data_scan\SPIRAL_measurement\Test\';
-        folder = [folder, 'SPIRAL_test_3\'];
+    str ={'select file'}
+    s = listdlg('PromptString','Select a file:','SelectionMode','single','ListString',str)
+    if s==1
+        [file,folder]=uigetfile;
     else
-        %     folder = '/home/tfernandes/Documents/Projetos/Project_lfStroke/preProcResults/Data/SPIRAL_measurement/';
-        %     folder = [folder, 'SPIRAL_test_3/'];
-        myCD = '/home/tfernandes/Documents/Projetos/Project_lfStroke/Tests/1_Spiral_test/Test';
-        cd(myCD)
-        str ={'select file'}
-        s = listdlg('PromptString','Select a file:','SelectionMode','single','ListString',str)
-        if s==1
-            [file,folder]=uigetfile;
-        else
-            folder=uigetdir
-        end
-        strTest1 = '.dat';
-        auxA     = strfind(file,strTest1);
-        filename = file(1:auxA-1);
-        
-        file_folder_cfl_hdr = [folder '/cfl_hdr_files'];
-        file_folder_results = [folder, '/Results'];
-        mkdir([file_folder_cfl_hdr]);
-        mkdir([file_folder_results]);
-        cd(folder)
+        folder=uigetdir
     end
+    strTest1 = '.dat';
+    auxA     = strfind(file,strTest1);
+    filename = file(1:auxA-1);
+
+    file_folder_cfl_hdr = [folder '/cfl_hdr_files'];
+    file_folder_results = [folder, '/Results'];
+    mkdir([file_folder_cfl_hdr]);
+    mkdir([file_folder_results]);
+    cd(folder)
+
     
     [files]   = dir(folder);
     fn        = files(5).name;       % get '.dat' file

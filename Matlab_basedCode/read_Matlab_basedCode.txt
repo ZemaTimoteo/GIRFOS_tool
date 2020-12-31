@@ -8,8 +8,11 @@ Folder: GIRF
       - Add the following tools to the Tool folder:
           - bart - https://mrirecon.github.io/bart/
           - Gridding - https://github.com/ndwork/griddingCodes
-      - As an exemple choose file '.dat' in /exemple folder
-      - run with your on '.dat' file
+      - As an exemple choose file '.dat' in /Example folder
+            - 'dat_file' folder contains the '.dat' file in three parts
+            - use https://pinetools.com/join-files to join the three files
+            - copy that file to the path: 'GIRFOS_tool/Matlab_basedCode/Example/test64_GIRF_tX-1_tY-1_Npulses-12_Nreps-3_Nslices-1_TR-2s_sm-115_RFbw-1_RFoff-         
+                                              50mm_tPulTotal-10ms/'
   
 Folder: GRE
   -

@@ -26,7 +26,11 @@ Folder: GIRF
                                               50mm_tPulTotal-10ms/'
   
 Folder: Spiral
-  - 
+  - mat_files - folder
+  - imProfile_Comparison_SPIRAL.m - 
+  - pypulseqSPIRAL_seqRecon.m - 
+  - recon_spiral_IRF.m - Reconstruct Spiral with GIRF
+  - recon_spiral_IRF_both_IRF_THEOR.m -
   
 Folder: Tools
   - Input_sequences (Folder)

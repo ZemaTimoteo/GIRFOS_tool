@@ -7,15 +7,8 @@
 if exist('test_GIRF_THEO','var') == 1
     fprintf('\n\n 0 - Sucessfully finished \n\n')
 else
-    clear all;
-    
-
-    cd('/home/tfernandes/Documents/Projetos/Project_lfStroke/Code/0_matlabCode/3_Reconstruction_Code')
-    addpath('mapVBVD/') % To read
-    addpath(genpath('/home/tfernandes/Documents/Projetos/Project_lfStroke/Code/bart-master')) % To read
-    addpath(genpath('/home/tfernandes/Documents/Projetos/Project_lfStroke/Code/0_matlabCode'));
-    addpath(genpath('Aux_Functions'));  % To reconstruct
-        
+    clear all;    
+    addpath(genpath('GIRFOS_tool/Matlab_basedCode/Tools/'));  % To reconstruct        
     % close all
     clc
 end
@@ -38,11 +31,6 @@ end
 if exist('test_GIRF_THEO','var') == 1
     fprintf('\n\n 1 - Sucessfully finished \n\n')    
 else
-
-    %     folder = '/home/tfernandes/Documents/Projetos/Project_lfStroke/preProcResults/Data/SPIRAL_measurement/';
-    %     folder = [folder, 'SPIRAL_test_3/'];
-    myCD = '/home/tfernandes/Documents/Projetos/Project_lfStroke/Tests/1_Spiral_test/Test';
-    cd(myCD)
     str ={'select file'}
     s = listdlg('PromptString','Select a file:','SelectionMode','single','ListString',str)
     if s==1
@@ -66,7 +54,7 @@ else
     fn_info   = files(6).name;       % get '.mat' file with sequence parameters from Python
     tmp       = load(fn_info);       % get values from '.mat' file with sequence parameters
     
-    cd('/home/tfernandes/Documents/Projetos/Project_lfStroke/Code/1_pythonCodes/Spiral/pulses')
+    cd('GIRFOS_tool/Matlab_basedCode/Example/')
     name_seq_template = ['vectSpiral_test',num2str(tmp.testSPI),'.mat'];
     % name_seq_template = ['vectSpiral.mat'];
     
@@ -128,8 +116,7 @@ fprintf('\n\n 2 - Sucessfully finished \n\n')
 %% part 3 - Get Theoric & Experimental k-Trajectories
 
 % --- 3.1 - load IRF function ---
-cdResults = ['/home/tfernandes/Documents/Projetos/Project_lfStroke/Tests/2_GIRF_test/Test/Results_IRF'];
-cd(cdResults)
+cd('GIRFOS_tool/Matlab_basedCode/Example/')
 load(['test',num2str(test),'_IRF.mat'])
 Hx      = H.Hx_w(:,1);
 Hy      = H.Hy_w(:,1);
@@ -193,8 +180,7 @@ if testKtraj == 'GIRF' %test according Vannesjo et al, 2013
         % % %     plot(abs((Ox_t)))
         % % %     hold on
         % % %     plot(abs((Oy_% --- 3.1 - load IRF function ---
-        cdResults = ['/home/tfernandes/Documents/Projetos/Project_lfStroke/Tests/2_GIRF_test/Test/Results_IRF'];
-        cd(cdResults)
+        cd('GIRFOS_tool/Matlab_basedCode/Example/')
         load(['test',num2str(test),'_IRF.mat'])
         Hx      = H.Hx_w(:,1);
         Hy      = H.Hy_w(:,1);
@@ -226,8 +212,7 @@ if testKtraj == 'GIRF' %test according Vannesjo et al, 2013
         %     clear Ox_test Oy_test
         
         % Obtain Output% --- 3.1 - load IRF function ---
-        cdResults = ['/home/tfernandes/Documents/Projetos/Project_lfStroke/Tests/2_GIRF_test/Test/Results_IRF'];
-        cd(cdResults)
+        cd('GIRFOS_tool/Matlab_basedCode/Example/')
         load(['test',num2str(test),'_IRF.mat'])
         Hx      = H.Hx_w(:,1);
         Hy      = H.Hy_w(:,1);

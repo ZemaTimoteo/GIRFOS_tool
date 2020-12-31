@@ -1,4 +1,3 @@
-obrigado
 clc
 
 %% --- 1 - Load and initialize vectors

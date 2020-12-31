@@ -1,5 +1,16 @@
 This file helps describing Matlab_based Code.
 
+Folder: Aux_Functions
+  -
+  -
+  
+Folder: Example
+  - dat_file - folder with '.dat' file for example
+  - test64_GIRF_tX-1_tY-1_Npulses-12_Nreps-3_Nslices-1_TR-2s_sm-115_RFbw-1_RFoff-50mm_tPulTotal-10ms - folder for example
+  - girf_SCAN_Input_freq_12_tTotal_10ms.mat - file used with 'get_GIRF.m'
+  - girf_SCAN_Input_freq_sincFunct_12.mat - file used with 'get_GIRF.m'
+  - girf_pulse_12_DT_1_1e-5_p110.mat - file used with 'get_GIRF.m'
+  
 Folder: GIRF
   - get_GIRF.m (Saves the GIRF from scanner of the respective GIRF sequence from pypulseq.seq )
   
@@ -14,9 +25,6 @@ Folder: GIRF
             - copy that file to the path: 'GIRFOS_tool/Matlab_basedCode/Example/test64_GIRF_tX-1_tY-1_Npulses-12_Nreps-3_Nslices-1_TR-2s_sm-115_RFbw-1_RFoff-         
                                               50mm_tPulTotal-10ms/'
   
-Folder: GRE
-  -
-  
 Folder: Spiral
   - 
   
@@ -29,9 +37,7 @@ Folder: Tools
   - gradient_create_GIRF.m (function adapted from: https://github.com/mriphysics/verse-mb/tree/master/bin)
   - gradient_distort_GIRF.m (function adapted from: https://github.com/mriphysics/verse-mb/tree/master/bin)
   
-Folder: Aux_Functions
-  -
-  -
+
 
 * To run this add to your 'Tool' folder the following toolboxes:
   - bart - https://mrirecon.github.io/bart/

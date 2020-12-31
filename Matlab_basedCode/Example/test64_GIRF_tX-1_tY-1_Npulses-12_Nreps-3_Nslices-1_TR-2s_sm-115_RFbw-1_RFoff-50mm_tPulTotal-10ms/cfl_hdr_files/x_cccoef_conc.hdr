@@ -1,0 +1,8 @@
+# Dimensions
+1 1 1 16 16 1 1 1 1 1 1 1 1 1 1 1 
+# Command
+cc -p 1 -M kx_l_conc x_cccoef_conc 
+# Files
+ >x_cccoef_conc <kx_l_conc
+# Creator
+BART v0.5.00

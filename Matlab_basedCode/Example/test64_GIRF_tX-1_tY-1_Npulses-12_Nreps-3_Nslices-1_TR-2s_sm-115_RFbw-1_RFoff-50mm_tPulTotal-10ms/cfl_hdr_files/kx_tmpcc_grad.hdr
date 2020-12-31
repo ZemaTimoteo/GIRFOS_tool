@@ -1,0 +1,8 @@
+# Dimensions
+999 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+# Command
+ccapply -p 1 kx_tmp_grad x_cccoef_conc kx_tmpcc_grad 
+# Files
+ >kx_tmpcc_grad <x_cccoef_conc <kx_tmp_grad
+# Creator
+BART v0.5.00

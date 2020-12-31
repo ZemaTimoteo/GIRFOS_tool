@@ -1,0 +1,8 @@
+# Dimensions
+1 1 1 16 16 1 1 1 1 1 1 1 1 1 1 1 
+# Command
+cc -p 1 -M ky_l_conc y_cccoef_conc 
+# Files
+ >y_cccoef_conc <ky_l_conc
+# Creator
+BART v0.5.00

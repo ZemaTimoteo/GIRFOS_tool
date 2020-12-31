@@ -98,12 +98,9 @@ end
 
 % ... part 2.3 - get theoretical Gx and Gy ...
 cd('/home/tfernandes/Documents/Projetos/Project_lfStroke/Code/1_pythonCodes/GIRF/pulses');
-if type == 'PULS'
-    tmp.gradients = load(['girf_pulse_' num2str(Npulses),'_DT_1_1e-5_p', num2str(p)]);
-elseif type == 'SCAN'
-    tTotal        = tmp.tPulTotal;               % total time of pulse    
-    tmp.gradients = load(['girf_',type,'_pulse_' num2str(Npulses),'_tTotal_',num2str(tTotal),'ms_DT_1_1e-5_p', num2str(p)]);
-end
+
+tTotal        = tmp.tPulTotal;               % total time of pulse    
+tmp.gradients = load(['girf_',type,'_pulse_' num2str(Npulses),'_tTotal_',num2str(tTotal),'ms_DT_1_1e-5_p', num2str(p)]);
 
 tGx           = zeros((Nadc-extra),Npulses);
 tGy           = zeros((Nadc-extra),Npulses);
@@ -148,13 +145,9 @@ fprintf('\n\n 2 - Sucessfully finished - Define Parametres\n\n')
 % ... part 3.1 - read input in frequency domain ...
 
 
-input            = load(['/home/tfernandes/Documents/Projetos/Project_lfStroke/Code/0_matlabCode/1_GIRF/pulses/girf_pulse_', num2str(Npulses),'_DT_1_1e-5_p', num2str(p),'.mat']);
-if type == 'PULS'
-    input_freq   = load(['/home/tfernandes/Documents/Projetos/Project_lfStroke/Code/0_matlabCode/1_GIRF/pulses/girf_',type,'_Input_freq_', num2str(Npulses),'.mat']);
-elseif type == 'SCAN'
-    input_freq   = load(['/home/tfernandes/Documents/Projetos/Project_lfStroke/Code/0_matlabCode/1_GIRF/pulses/girf_',type,'_Input_freq_', num2str(Npulses),'_tTotal_',num2str(tTotal),'ms.mat']);        
-end
-input_sincF_freq = load(['/home/tfernandes/Documents/Projetos/Project_lfStroke/Code/0_matlabCode/1_GIRF/pulses/girf_',type,'_Input_freq_sincFunct_', num2str(Npulses),'.mat']);
+input            = load(['GIRFOS_tool/Matlab_basedCode/Example/girf_pulse_', num2str(Npulses),'_DT_1_1e-5_p', num2str(p),'.mat']);
+input_freq       = load(['GIRFOS_tool/Matlab_basedCode/Example/girf_',type,'_Input_freq_', num2str(Npulses),'_tTotal_',num2str(tTotal),'ms.mat']);        
+input_sincF_freq = load(['GIRFOS_tool/Matlab_basedCode/Example/girf_',type,'_Input_freq_sincFunct_', num2str(Npulses),'.mat']);
 
 
 fprintf('\n\n 3 - Sucessfully finished - Read Input\n\n')
@@ -947,7 +940,7 @@ fprintf('\n\n 7 - Sucessfully finished -  Obtaining the IRF of the system \n\n')
 if saveT == 'True'
     cd(file_folder_results)
     save(['test',num2str(test),'_IRF.mat'],'H')
-    cd([myCD, '/Results_IRF' ])
+    cd(['/Results_IRF' ])
     save(['test',num2str(test),'_IRF.mat'],'H')
     cd(file_folder)    
     fprintf('\n\n 8 - Sucessfully finished - Save IRF\n\n')    

@@ -1,7 +1,7 @@
 This file helps describing Matlab_based Code.
 
  
-# Folder: Example
+### Folder: Example
   - dat_file - folder with '.dat' file for example (splitted in three parts - use: https://pinetools.com/join-files to combine it in one file)
   - Spiral_dat_file: folder with spiral '.dat' file for example (splitted in three parts - use: https://pinetools.com/join-files to combine it in one file)
   - test64_GIRF_tX-1_tY-1_Npulses-12_Nreps-3_Nslices-1_TR-2s_sm-115_RFbw-1_RFoff-50mm_tPulTotal-10ms - folder for example
@@ -11,7 +11,7 @@ This file helps describing Matlab_based Code.
   - vectSpiral_test4.mat - file for example of spiral implementation with GIRF
   - test64_IRF.mat - file for example of spiral implementation with GIRF
   
-# Folder: GIRF
+### Folder: GIRF
   - get_GIRF.m (Saves the GIRF from scanner of the respective GIRF sequence from pypulseq.seq )
   
   - To run:
@@ -26,7 +26,7 @@ This file helps describing Matlab_based Code.
                                               50mm_tPulTotal-10ms/'
             - when running the script, select the '.dat' file you copy to the path in the last step.                                              
   
-# Folder: Spiral
+### Folder: Spiral
   - pypulseqSPIRAL_seqRecon.m - Obtain external gradients in matlab matrix from pypulseq sequence
   - recon_spiral_IRF.m - Reconstruct Spiral with GIRF
   - recon_spiral_IRF_both_IRF_THEOR.m - Run for each test of SCAN the reconstruction with Theoric ktraj and GIRF ktraj
@@ -55,7 +55,7 @@ This file helps describing Matlab_based Code.
                                               _bvalue-0/'
             - when running the script, select the '.dat' file you copy to the path in the last step.
             
-# Folder: Tools
+### Folder: Tools
   - Input_sequences (Folder)
   - mapVBVD (toolbox from https://github.com/CIC-methods/FID-A/tree/master/inputOutput/mapVBVD)
   - pulses (Folder)

@@ -1,6 +1,6 @@
 This file helps describing pypulseq_based Code.
 
-###Folder: GIRF
+### Folder: GIRF
   - Pulses (folder with files for GIRF pulses)
   - test_GIRF_SEQfile.py (This code creates GIRF (with external gradients) '.seq' file to run in scanner)
   - make_GIRF_SEQfile.py (aux function)
@@ -13,14 +13,14 @@ This file helps describing pypulseq_based Code.
       - To define different GIRF pulses run code from folder ('GIRF_shape_script.m') - https://github.com/ZemaTimoteo/GIRFOS_tool/tree/main/Matlab_basedCode/Tools
       - Run the test_GIRF_SEQfile.py
       
-###Folder: GRE
+### Folder: GRE
   - test_GRE_SEQfile.py (This code creates GRE '.seq' file to run in scanner)
   
   - Steps:
       - Set paths
       - Run the test_GRE_SEQfile.py
   
-###Folder: Spiral
+### Folder: Spiral
   - Pulses (folder with files for SPIRAL pulses)
   - test_Spiral_SEQfile.py (This code creates SPIRAL (with external gradients) '.seq' file to run in scanner)
   - make_Spiral_SEQfile.py (aux function)

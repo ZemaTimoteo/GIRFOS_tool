@@ -34,7 +34,7 @@ This file helps describing pypulseq_based Code.
       - Set parameters
       - Run the test_Spiral_SEQfile.py
       
-Folder: Diffusion (To be runned by test_Spiral_SEQfile w/ Diffusion)
+### Folder: Diffusion (To be runned by test_Spiral_SEQfile w/ Diffusion)
   - diff_funcs.py
   - k2g.py
   - make_Diffusion_SEQfile.py (This function builds a spin echo diffusion weighting sequence with spiral trajectories and EPI trajectory optimizing the TE for a desired b-value.)

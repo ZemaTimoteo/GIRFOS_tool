@@ -8,7 +8,7 @@ This file helps describing pypulseq_based Code.
   - Steps:
       - Create a Toolboxes folder with:
           - code from pypulseq - https://github.com/imr-framework/pypulseq
-          - code from pulseqDiffusion - https://github.com/openjournals/joss-reviews/issues/2478
+          - code from pulseqDiffusion - https://github.com/ritagnunes/PulseqDiffusion
       - Set paths
       - To define different GIRF pulses run code from folder ('GIRF_shape_script.m') - https://github.com/ZemaTimoteo/GIRFOS_tool/tree/main/Matlab_basedCode/Tools
       - Run the test_GIRF_SEQfile.py
@@ -29,7 +29,7 @@ This file helps describing pypulseq_based Code.
   - Steps:
       - Create a Toolboxes folder with:
           - code from pypulseq - https://github.com/imr-framework/pypulseq
-          - code from pulseqDiffusion - https://github.com/openjournals/joss-reviews/issues/2478      
+          - code from pulseqDiffusion - https://github.com/ritagnunes/PulseqDiffusion      
       - Set paths
       - Set parameters
       - Run the test_Spiral_SEQfile.py

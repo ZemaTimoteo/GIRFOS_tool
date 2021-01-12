@@ -71,4 +71,4 @@ This file helps describing Matlab_based Code.
   - Gridding - https://github.com/ndwork/griddingCodes
  
   
-  Also you need to install JEMRIS to run 
+  Also you need to install JEMRIS (http://www.jemris.org/) to run 

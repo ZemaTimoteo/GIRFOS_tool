@@ -1,0 +1,8 @@
+# Dimensions
+999 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+# Command
+ccapply -p 1 ky_tmp_Ngrad_Px0 ky_Px0_cccoef_conc ky_tmpcc_Ngrad_Px0 
+# Files
+ >ky_tmpcc_Ngrad_Px0 <ky_Px0_cccoef_conc <ky_tmp_Ngrad_Px0
+# Creator
+BART v0.5.00

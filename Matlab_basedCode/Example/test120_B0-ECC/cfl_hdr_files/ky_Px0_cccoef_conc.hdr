@@ -1,0 +1,8 @@
+# Dimensions
+1 1 1 32 32 1 1 1 1 1 1 1 1 1 1 1 
+# Command
+cc -p 1 -M ky_conc_Px0 ky_Px0_cccoef_conc 
+# Files
+ >ky_Px0_cccoef_conc <ky_conc_Px0
+# Creator
+BART v0.5.00
